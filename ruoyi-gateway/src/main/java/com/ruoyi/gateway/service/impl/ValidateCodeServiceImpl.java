@@ -11,9 +11,9 @@ import org.springframework.util.FastByteArrayOutputStream;
 import com.google.code.kaptcha.Producer;
 import com.ruoyi.common.core.constant.Constants;
 import com.ruoyi.common.core.exception.CaptchaException;
-import com.ruoyi.common.core.utils.IdUtils;
 import com.ruoyi.common.core.utils.StringUtils;
 import com.ruoyi.common.core.utils.sign.Base64;
+import com.ruoyi.common.core.utils.uuid.IdUtils;
 import com.ruoyi.common.core.web.domain.AjaxResult;
 import com.ruoyi.common.redis.service.RedisService;
 import com.ruoyi.gateway.config.properties.CaptchaProperties;
@@ -43,7 +43,7 @@ public class ValidateCodeServiceImpl implements ValidateCodeService
      * 生成验证码
      */
     @Override
-    public AjaxResult createCapcha() throws IOException, CaptchaException
+    public AjaxResult createCaptcha() throws IOException, CaptchaException
     {
         AjaxResult ajax = AjaxResult.success();
         boolean captchaOnOff = captchaProperties.getEnabled();
@@ -96,7 +96,7 @@ public class ValidateCodeServiceImpl implements ValidateCodeService
      * 校验验证码
      */
     @Override
-    public void checkCapcha(String code, String uuid) throws CaptchaException
+    public void checkCaptcha(String code, String uuid) throws CaptchaException
     {
         if (StringUtils.isEmpty(code))
         {

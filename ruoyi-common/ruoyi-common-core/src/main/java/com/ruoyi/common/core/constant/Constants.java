@@ -20,12 +20,17 @@ public class Constants
     /**
      * RMI 远程方法调用
      */
-    public static final String LOOKUP_RMI = "rmi://";
+    public static final String LOOKUP_RMI = "rmi:";
 
     /**
      * LDAP 远程方法调用
      */
-    public static final String LOOKUP_LDAP = "ldap://";
+    public static final String LOOKUP_LDAP = "ldap:";
+
+    /**
+     * LDAPS 远程方法调用
+     */
+    public static final String LOOKUP_LDAPS = "ldaps:";
 
     /**
      * http请求
@@ -46,6 +51,16 @@ public class Constants
      * 失败标记
      */
     public static final Integer FAIL = 500;
+
+    /**
+     * 登录成功状态
+     */
+    public static final String LOGIN_SUCCESS_STATUS = "0";
+
+    /**
+     * 登录失败状态
+     */
+    public static final String LOGIN_FAIL_STATUS = "1";
 
     /**
      * 登录成功
@@ -114,8 +129,13 @@ public class Constants
     public static final String RESOURCE_PREFIX = "/profile";
 
     /**
+     * 定时任务白名单配置（仅允许访问的包名，如其他需要可以自行添加）
+     */
+    public static final String[] JOB_WHITELIST_STR = { "com.ruoyi" };
+
+    /**
      * 定时任务违规的字符
      */
     public static final String[] JOB_ERROR_STR = { "java.net.URL", "javax.naming.InitialContext", "org.yaml.snakeyaml",
-            "org.springframework.jndi" };
+            "org.springframework", "org.apache", "com.ruoyi.common.core.utils.file" };
 }

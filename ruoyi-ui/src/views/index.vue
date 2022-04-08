@@ -118,10 +118,10 @@
               >
             </p>
             <p>
-              <i class="el-icon-user-solid"></i> QQ群：<s>满42799195</s>
-              <s>满170157040</s> <s>满130643120</s> <s>满225920371</s>
-              <a href="https://jq.qq.com/?_wv=1027&k=Kg9CdVdx" target="_blank">
-                201705537</a
+              <i class="el-icon-user-solid"></i> QQ群：<s>满42799195</s> <s>满170157040</s>
+              <s>满130643120</s> <s>满225920371</s> <s>满201705537</s> <s>满236543183</s>
+              <a href="https://jq.qq.com/?_wv=1027&k=73TMBe12" target="_blank">
+                213618602</a
               >
             </p>
             <p>
@@ -146,6 +146,76 @@
             <span>更新日志</span>
           </div>
           <el-collapse accordion>
+            <el-collapse-item title="v3.4.0 - 2022-01-24">
+              <ol>
+                <li>新增Vue3前端代码生成模板</li>
+                <li>新增图片预览组件</li>
+                <li>新增压缩插件实现打包Gzip</li>
+                <li>新增docker一键复制的脚本</li>
+                <li>自定义xss校验注解实现</li>
+                <li>路由支持单独配置菜单或角色权限</li>
+                <li>前端支持设置是否需要防止数据重复提交</li>
+                <li>预览组件支持多图显示</li>
+                <li>代码生成列表图片支持预览</li>
+                <li>代码生成新增Java类型Boolean</li>
+                <li>定时任务目标字符串过滤特殊字符</li>
+                <li>定时任务目标字符串验证包名白名单</li>
+				<li>升级nacos到最新版2.0.4</li>
+                <li>升级spring-cloud到最新版2021.0.0</li>
+                <li>升级spring-boot到最新版本2.6.3</li>
+                <li>升级spring-boot-admin到最新版2.6.1</li>
+                <li>升级pagehelper到最新版1.4.1</li>
+                <li>升级fastjson到最新版1.2.79</li>
+                <li>SQL工具类新增检查关键字方法</li>
+                <li>修复打包后字体图标偶现的乱码问题</li>
+                <li>修复版本差异导致的懒加载报错问题</li>
+                <li>修复选项卡点击右键刷新丢失参数问题</li>
+                <li>修复登录失效后多次请求提示多次弹窗问题</li>
+                <li>优化加载字典缓存数据</li>
+                <li>优化代码生成同步更新字段</li>
+                <li>优化代码生成字典组重复问题</li>
+                <li>优化空值不进行回显数据字典</li>
+                <li>优化用户导入提示溢出则显示滚动条</li>
+                <li>优化定时任务cron表达式小时设置24</li>
+                <li>优化部门修改缩放后出现的错位问题</li>
+                <li>优化分页方法设置成通用方便灵活调用</li>
+                <li>优化用户管理部门查询选择节点后分页参数初始</li>
+                <li>其他细节优化</li>
+              </ol>
+            </el-collapse-item>
+            <el-collapse-item title="v3.3.0 - 2021-12-13">
+              <ol>
+                <li>新增配套并同步的Vue3前端版本</li>
+                <li>新增认证对象简化权限验证</li>
+                <li>新增tab对象简化页签操作</li>
+                <li>修改获取缓存信息方式</li>
+                <li>修改权限认证注解实现</li>
+				<li>自定义文字复制剪贴指令</li>
+                <li>升级axios到最新版本0.24.0</li>
+                <li>升级core-js到最新版本3.19.1</li>
+                <li>升级jsencrypt到最新版本3.2.1</li>
+                <li>升级js-cookie到最新版本3.0.1</li>
+				<li>升级clipboard到最新版本2.0.8</li>
+                <li>升级velocity到最新版本2.3</li>
+                <li>升级spring-boot到最新版本2.5.6</li>
+                <li>升级spring-boot-admin到最新版2.5.4</li>
+                <li>升级dynamic-ds到最新版本3.5.0</li>
+				<li>代码生成预览支持复制内容</li>
+                <li>修复五级以上菜单出现的404问题</li>
+                <li>生产环境使用路由懒加载提升页面响应速度</li>
+                <li>任务屏蔽违规字符&参数忽略双引号中的逗号</li>
+                <li>优化用户个人信息接口防止修改用户名</li>
+                <li>优化登录/验证码请求headers不设置token</li>
+                <li>优化注册成功提示消息类型success</li>
+                <li>优化下载解析blob响应是否登录失效</li>
+                <li>修复字符串无法被反转义问题</li>
+                <li>修复响应体过大出现的乱码问题</li>
+                <li>修复回显数据字典组的键值错误</li>
+                <li>修复代码生成复选框字典遗漏问题</li>
+                <li>修复代码生成模板主子表删除缺少事务</li>
+                <li>其他细节优化</li>
+              </ol>
+            </el-collapse-item>
             <el-collapse-item title="v3.2.0 - 2021-10-12">
               <ol>
                 <li>菜单管理支持配置路由参数</li>
@@ -609,7 +679,7 @@ export default {
   data() {
     return {
       // 版本号
-      version: "3.2.0",
+      version: "3.4.0",
     };
   },
   methods: {
